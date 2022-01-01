@@ -5,23 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Калькулятор расчета амортизации</title>
-<script>
-        function amortization (x) {
-        return x*2
-    }
-</script>
+<script src="js/amortization.js"></script>
 </head>
 <body>
-    <script>
-        function render () {
-            const name = document.getElementById('name').value;
-            const period = document.getElementById('period').value;
-            const income = document.getElementById('income').value;
-            const amort = amortization (income);
-            const text = `Амортизация инженера ${name} за ${period} составила ${amort}`  ;
-            document.getElementById('result').innerHTML = text;
-    }
-    </script>
+    <h1>Расчет амортизации</h1>
+    <script src="js/render.js"></script>
     <form>
         <label for = 'income'>Пробег:</label><br>
         <input type = "text" id='income' name="income" value=""><br>
