@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор расчета амортизации</title>
+<script>
+        function tax3group (x) {
+        return x*2
+    }
+</script>
+</head>
+<body>
+    <script>
+        function render () {
+            const name = document.getElementById('name').value;
+            const period = document.getElementById('period').value;
+            const income = document.getElementById('income').value;
+            const amort = tax3group (income);
+            const text = `Амортизация инженера ${name} за ${period} составила ${amort}`  ;
+            document.getElementById('result').innerHTML = text;
+    }
+    </script>
+    <form>
+        <label for = 'income'>Пробег:</label><br>
+        <input type = "text" id='income' name="income" value=""><br>
+        <label for = 'name'>ФИО инженера:</label>   <br>
+        <input type = "text" id='name' name="name" value="" ><br>
+        <label for = "period">Месяц:</label>            <br>
+        <input type= "text" id='period' name="period" value=""><br><br>
+        <button type="button" onclick="render()">Расчитать амортизацию</button><br>
+    </form>
+       <div style='padding-top:10px' id="result" >
+       </div>
+    </body>
+    </html>
