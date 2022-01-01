@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Калькулятор расчета амортизации</title>
 <script>
-        function tax3group (x) {
+        function amortization (x) {
         return x*2
     }
 </script>
@@ -17,7 +17,7 @@
             const name = document.getElementById('name').value;
             const period = document.getElementById('period').value;
             const income = document.getElementById('income').value;
-            const amort = tax3group (income);
+            const amort = amortization (income);
             const text = `Амортизация инженера ${name} за ${period} составила ${amort}`  ;
             document.getElementById('result').innerHTML = text;
     }
